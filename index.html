@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getComputerChoices() {
+        let movesList = ["Rock", "Paper", "Scissors"];
+        let randomMoveIndex = Math.floor(Math.random() * movesList.length);
+        let randomMove = movesList[randomMoveIndex];
+        return randomMove;
+      }
+
+      function getPlayerChoice() {
+        let getPlayerChoice = prompt("Please enter Rock, Paper or Scissors ");
+        getPlayerChoice = getPlayerChoice.toLowerCase();
+        return getPlayerChoice;
+      }
+
+      function playRound(
+        playerSelection = getPlayerChoice(),
+        computerSelection = getComputerChoices()
+      ) {
+        if (playerSelection === computerSelection) {
+          console.log("i drop 0");
+          return 0;
+        } else if (
+          (playerSelection === "rock" && computerSelection === "Scissors") ||
+          (playerSelection === "scissors" && computerSelection === "Paper") ||
+          (playerSelection === "paper" && computerSelection === "Rock")
+        ) {
+          console.log("i drop 1");
+          return 1;
+        } else {
+          console.log("i drop 2");
+          return 2;
+        }
+      }
+
+      function game() {
+        playerPoints = 0;
+        computerPoints = 0;
+        for (let i = 0; i < 5; i++) {
+          verdict = playRound();
+          if (verdict === 0) {
+            consol.log("draw");
+          } else if (verdict === 1) {
+            console.log("Player win");
+            playerPoints++;
+          } else {
+            console.log("PC win");
+            computerPoints++;
+          }
+        }
+        console.log(`Player: ${playerPoints}, PC ${computerPoints}`);
+      }
+
+      console.log(game());
+    </script>
+  </body>
+</html>
