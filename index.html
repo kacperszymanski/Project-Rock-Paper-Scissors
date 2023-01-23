@@ -8,58 +8,40 @@
   </head>
   <body>
     <script>
-      function getComputerChoices() {
-        let movesList = ["Rock", "Paper", "Scissors"];
-        let randomMoveIndex = Math.floor(Math.random() * movesList.length);
-        let randomMove = movesList[randomMoveIndex];
-        return randomMove;
-      }
-
-      function getPlayerChoice() {
-        let getPlayerChoice = prompt("Please enter Rock, Paper or Scissors ");
-        getPlayerChoice = getPlayerChoice.toLowerCase();
-        return getPlayerChoice;
-      }
-
-      function playRound(
-        playerSelection = getPlayerChoice(),
-        computerSelection = getComputerChoices()
-      ) {
-        if (playerSelection === computerSelection) {
-          console.log("i drop 0");
-          return 0;
-        } else if (
-          (playerSelection === "rock" && computerSelection === "Scissors") ||
-          (playerSelection === "scissors" && computerSelection === "Paper") ||
-          (playerSelection === "paper" && computerSelection === "Rock")
-        ) {
-          console.log("i drop 1");
-          return 1;
-        } else {
-          console.log("i drop 2");
-          return 2;
-        }
-      }
-
-      function game() {
-        playerPoints = 0;
-        computerPoints = 0;
-        for (let i = 0; i < 5; i++) {
-          verdict = playRound();
-          if (verdict === 0) {
-            consol.log("draw");
-          } else if (verdict === 1) {
-            console.log("Player win");
-            playerPoints++;
+        function playRound() {
+          let movesList = ["rock", "paper", "scissors"];
+          let computerSelection = movesList[Math.floor(Math.random() * movesList.length)];
+          let playerSelection = prompt("Please enter rock, paper or scissors").toLowerCase();
+          if (playerSelection === computerSelection) {
+            return 0;
+          } else if ((playerSelection === "rock" && computerSelection === "scissors") ||
+                     (playerSelection === "scissors" && computerSelection === "paper") ||
+                     (playerSelection === "paper" && computerSelection === "rock")) {
+            return 1;
           } else {
-            console.log("PC win");
-            computerPoints++;
+            return 2;
           }
         }
-        console.log(`Player: ${playerPoints}, PC ${computerPoints}`);
-      }
-
-      console.log(game());
+      
+        function game() {
+          let playerPoints = 0;
+          let computerPoints = 0;
+          for (let i = 0; i < 5; i++) {
+            let verdict = playRound();
+            if (verdict === 0) {
+              console.log("Draw");
+            } else if (verdict === 1) {
+              console.log("Player wins");
+              playerPoints++;
+            } else {
+              console.log("Computer wins");
+              computerPoints++;
+            }
+          }
+          console.log(`Player: ${playerPoints}, Computer: ${computerPoints}`);
+        }
+        game();
+      </script>
     </script>
   </body>
 </html>
