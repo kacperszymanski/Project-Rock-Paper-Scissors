@@ -2,20 +2,20 @@ let playerSelection = '';
 let playerPoints = 0;
 let computerPoints = 0;
 
-const boxWithplayerChoice = document.getElementById('boxWithplayerChoice');
+const boxWithPlayerChoice = document.getElementById('boxWithPlayerChoice');
 
-boxWithplayerChoice.addEventListener('click', event => {
+boxWithPlayerChoice.addEventListener('click', event => {
   if (event.target.nodeName !== 'BUTTON') return;
 
   playerSelection = event.target.id.replace('playerChoice', '').toLowerCase();
-  document.getElementById("WhatPlayerChoese").innerHTML = `Player chose ${playerSelection}`;
+  document.getElementById("WhatPlayerChooses").innerHTML = `Player chooses ${playerSelection}`;
   game(playerSelection);
 });
 
 function playRound(playerSelection) {
   let movesList = ["rock", "paper", "scissors"];
   let computerSelection = movesList[Math.floor(Math.random() * movesList.length)];
-
+    document.getElementById("WhatComputerChooses").innerHTML = `Computer chooses ${computerSelection}`;
   if (playerSelection === computerSelection) return 0;
   if ((playerSelection === "rock" && computerSelection === "scissors") ||
       (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -36,5 +36,5 @@ function game(playerSelection) {
     computerPoints++;
   }
 
-  document.getElementById("gameResult").innerHTML = `${playerPoints} ${computerPoints}`;
+  document.getElementById("gameResult").innerHTML = `Player points ${playerPoints} - Computer points ${computerPoints}`;
 }
