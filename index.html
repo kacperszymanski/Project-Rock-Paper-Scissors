@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-        function playRound() {
-          let movesList = ["rock", "paper", "scissors"];
-          let computerSelection = movesList[Math.floor(Math.random() * movesList.length)];
-          let playerSelection = prompt("Please enter rock, paper or scissors").toLowerCase();
-          if (playerSelection === computerSelection) {
-            return 0;
-          } else if ((playerSelection === "rock" && computerSelection === "scissors") ||
-                     (playerSelection === "scissors" && computerSelection === "paper") ||
-                     (playerSelection === "paper" && computerSelection === "rock")) {
-            return 1;
-          } else {
-            return 2;
-          }
-        }
-      
-        function game() {
-          let playerPoints = 0;
-          let computerPoints = 0;
-          for (let i = 0; i < 5; i++) {
-            let verdict = playRound();
-            if (verdict === 0) {
-              console.log("Draw");
-            } else if (verdict === 1) {
-              console.log("Player wins");
-              playerPoints++;
-            } else {
-              console.log("Computer wins");
-              computerPoints++;
-            }
-          }
-          console.log(`Player: ${playerPoints}, Computer: ${computerPoints}`);
-        }
-        game();
-      </script>
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div id="boxWithplayerChoice">
+    <button id="playerChoiceScissors">scissors</button>
+    <button id="playerChoicePaper">paper</button>
+    <button id="playerChoiceRock">rock</button>
+  </div>
+  <p id="WhatPlayerChoese"></p>
+  <p id="whoWinRound"></p>
+</body>
+
 </html>
