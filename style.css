@@ -9,12 +9,12 @@
 
 
 body{
-  background-color:#010326;
+  background-color:#001425;
   background-image:linear-gradient(
     rgba(0, 0, 0, 0.6), 
     rgba(0, 0, 0, 0.6)
   ), url("background.png");
-  background-size:cover;
+  background-size:auto;
   color: white;
   font-size: 30px;
   padding: 5%;
@@ -106,9 +106,9 @@ h1 {
   
 }
 
-.moves-p{
+.moves-container-text{
   margin:0
-  
+
 }
 .round-verdict-container{
   background-color:calc();
