@@ -12,6 +12,13 @@ boxWithPlayerChoice.addEventListener('click', (event) => {
 
   playerSelection = event.target.id.replace('playerChoice', '').toLowerCase();
   document.getElementById("WhatPlayerChooses").innerHTML = playerSelection;
+
+  if (playerSelection === 'rock') {document.getElementById("WhatPlayerChooses").innerHTML = '&#128074;';
+
+} else if (playerSelection === 'paper'){document.getElementById("WhatPlayerChooses").innerHTML = '&#128400;'
+
+} else {document.getElementById("WhatPlayerChooses").innerHTML = '&#9996;'}
+  
   game(playerSelection);
 });
 
@@ -19,7 +26,12 @@ const movesList = ["rock", "paper", "scissors"];
 
 const playRound = (playerSelection) => {
   let computerSelection = movesList[Math.floor(Math.random() * movesList.length)];
-  document.getElementById("WhatComputerChooses").innerHTML = computerSelection;
+  if (computerSelection === 'rock') {document.getElementById("WhatComputerChooses").innerHTML = '&#128074;';
+
+  } else if (computerSelection === 'paper'){document.getElementById("WhatComputerChooses").innerHTML = '&#128400;'
+
+  } else {document.getElementById("WhatComputerChooses").innerHTML = '&#9996;'}
+
   if (playerSelection === computerSelection) return 0;
   if ((playerSelection === "rock" && computerSelection === "scissors") ||
       (playerSelection === "scissors" && computerSelection === "paper") ||

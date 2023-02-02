@@ -5,14 +5,9 @@
   font-weight: normal;
   font-style: normal;
 }
-@media (max-width: 500px){
-  #players-moves-container{
-  flex-direction: column;
-  }
-  #what-player-chooses{
-    flex-direction: column;
-  }
-}
+
+p { margin:0 }
+
 
 body{
   background-color:#010326;
@@ -96,30 +91,20 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
-.what-player-chooses{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color:calc();
-  border: 5px dotted #F2811D;
-  border-radius: 40px;
-  margin: 14px;
-  padding: 25px;
-  font-size: 80%;
-}
 
-.what-computer-chooses{
+
+.what-computer-and-player-chooses{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  text-align: center;
   justify-content: center;
   background-color:calc();
   border: 5px dotted #F2811D;
   border-radius: 40px;
   margin: 14px;
   padding: 25px;
-  font-size: 80%;
+  
 }
 
 .round-verdict-container{
