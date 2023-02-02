@@ -58,9 +58,9 @@ h1 {
   
 }
 .choice {
-  font-size: 50px;
-  padding: 50px;
-  margin: 14px;
+  font-size: 300%;
+  padding: 4%;
+  margin: 3%;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -68,7 +68,7 @@ h1 {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 100px;
+  border-radius: 100%;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -106,6 +106,7 @@ h1 {
   border-radius: 40px;
   margin: 14px;
   padding: 25px;
+  font-size: 80%;
 }
 
 .what-computer-chooses{
@@ -118,6 +119,7 @@ h1 {
   border-radius: 40px;
   margin: 14px;
   padding: 25px;
+  font-size: 80%;
 }
 
 .round-verdict-container{
