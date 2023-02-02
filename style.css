@@ -20,10 +20,11 @@ body{
     rgba(0, 0, 0, 0.6), 
     rgba(0, 0, 0, 0.6)
   ), url("background.png");
-  background-size: cover;
+  background-size: auto;
   color: white;
   font-size: 30px;
   padding: 5%;
+  
 
 
 }
@@ -31,6 +32,7 @@ h1 {
   font-family: 'ticket_to_the_starregular';
   text-align: center;
   margin: 20% 0 20% 0;
+
   
 }
 
@@ -132,11 +134,42 @@ border: 5px dotted #F2522E;
 border-radius: 40px;
 margin: 14px;
 padding: 25px;
-
 }
 
-#010326,
-#0367A6,
-#025928,
-#F2811D,
-#F2522E,
+.fade-in-text-h1 {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.start-element {
+  text-align: center;
+}
+
+#buttonToStart{
+  margin-top: -100px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 40px;
+  background-color:transparent;
+  color: white;
+  font-size: large;
+}
+
+#game {
+  display: none;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+}
+

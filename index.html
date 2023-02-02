@@ -10,10 +10,13 @@
   </head>
 
   <body>
-    <div>
-      <div>
-        <h1>Welcome to the Rock-Paper-Scissors Experience!</h1>
-      </div>
+    <div class="start-element">
+      <h1 class="fade-in-text-h1">
+        Welcome to the Rock-Paper-Scissors Experience
+      </h1>
+      <button id="buttonToStart">START</button>
+    </div>
+    <div id="game">
       <div class="intro-text">
         <p>
           Join us for a classic game of strategy, skill, and luck. Whether
@@ -31,29 +34,31 @@
         </p>
         <p>Good luck and have fun!</p>
       </div>
-    </div>
 
-    <div class="choice-container" id="boxWithPlayerChoice">
-      <button class="choice" id="playerChoiceScissors">&#9996;</button>
-      <button class="choice" id="playerChoicePaper">&#128400;</button>
-      <button class="choice" id="playerChoiceRock">&#128074;</button>
-    </div>
-
-    <div class="game-container">
-      <div class="players-moves-container">
-        <div class="what-player-chooses">
-          <p>selected move:</p>
-          <p id="WhatPlayerChooses"></p>
-        </div>
-        <div class="what-computer-chooses">
-          <p>comupter move:</p>
-          <p id="WhatComputerChooses"></p>
-        </div>
+      <div class="choice-container" id="boxWithPlayerChoice">
+        <button class="choice" id="playerChoiceScissors">&#9996;</button>
+        <button class="choice" id="playerChoicePaper">&#128400;</button>
+        <button class="choice" id="playerChoiceRock">&#128074;</button>
       </div>
 
-      <div class="round-verdict-container" id="whoWinRound">Who win round</div>
-      <div class="score-container" id="gameResult">
-        Player points 0 - Computer points 0
+      <div class="game-container">
+        <div class="players-moves-container">
+          <div class="what-player-chooses">
+            <p>selected move:</p>
+            <p id="WhatPlayerChooses"></p>
+          </div>
+          <div class="what-computer-chooses">
+            <p>comupter move:</p>
+            <p id="WhatComputerChooses"></p>
+          </div>
+        </div>
+
+        <div class="round-verdict-container" id="whoWinRound">
+          Who win round
+        </div>
+        <div class="score-container" id="gameResult">
+          Player points 0 - Computer points 0
+        </div>
       </div>
     </div>
   </body>

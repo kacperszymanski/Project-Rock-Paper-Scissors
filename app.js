@@ -1,7 +1,11 @@
+
+
 let playerSelection = '';
 let playerPoints = 0;
 let computerPoints = 0;
 const boxWithPlayerChoice = document.getElementById('boxWithPlayerChoice');
+const h1 = document.getElementById("animation1");
+
 
 boxWithPlayerChoice.addEventListener('click', (event) => {
   if (event.target.nodeName !== 'BUTTON') return;
@@ -37,3 +41,13 @@ const game = (playerSelection) => {
   document.getElementById("whoWinRound").innerHTML = winMessage;
   document.getElementById("gameResult").innerHTML = `Player points ${playerPoints} - Computer points ${computerPoints}`;
 };
+
+const targetDiv = document.getElementById("game");
+    const btn = document.getElementById("buttonToStart");
+    btn.onclick = function () {
+      if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+      } else {
+        targetDiv.style.display = "block";
+      }
+    };
