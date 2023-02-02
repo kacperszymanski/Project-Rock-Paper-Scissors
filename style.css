@@ -6,7 +6,9 @@
   font-style: normal;
 }
 
-
+html {
+  scroll-behavior: smooth;
+ }
 
 body{
   background-color:#001425;
@@ -25,7 +27,7 @@ body{
 h1 {
   font-family: 'ticket_to_the_starregular';
   text-align: center;
-  margin: 20% 0 20% 0;
+  margin: 10% 0 10% 0;
 
   
 }
@@ -66,6 +68,27 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+.choice:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 #playerChoiceScissors {
@@ -144,14 +167,27 @@ padding: 25px;
 }
 
 #buttonToStart{
-  margin-top: -100px;
   padding: 20px;
   border: 1px solid white;
   border-radius: 40px;
   background-color:transparent;
   color: white;
   font-size: large;
+  
 }
+.a-of-start{
+  text-decoration: none;
+  color: white;
+}
+
+#buttonToStart:hover { 
+  border: 1px solid #F2522E;
+  color: #F2522E;
+}
+
+#buttonToStart:active {  
+  border: 1px solid #0367A6;
+  color: #0367A6;}
 
 #game {
   display: none;

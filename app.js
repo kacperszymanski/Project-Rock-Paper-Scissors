@@ -57,7 +57,7 @@ const game = (playerSelection) => {
 const targetDiv = document.getElementById("game");
     const btn = document.getElementById("buttonToStart");
     btn.onclick = function () {
-      if (targetDiv.style.display !== "none") {
+      if (getComputedStyle(targetDiv).display !== "none") {
         targetDiv.style.display = "none";
       } else {
         targetDiv.style.display = "block";
