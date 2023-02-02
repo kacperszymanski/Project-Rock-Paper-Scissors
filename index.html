@@ -10,19 +10,51 @@
   </head>
 
   <body>
-    <div id="boxWithPlayerChoice">
-      <button class="button-85" role="button" id="playerChoiceScissors">
-        scissors
-      </button>
-      <button id="playerChoicePaper">paper</button>
-      <button id="playerChoiceRock">rock</button>
+    <div>
+      <div>
+        <h1>Welcome to the Rock-Paper-Scissors Experience!</h1>
+      </div>
+      <div class="intro-text">
+        <p>
+          Join us for a classic game of strategy, skill, and luck. Whether
+          you're a seasoned player or new to the game, Rock-Paper-Scissors is
+          the perfect way to challenge yourself and have some fun. The rules are
+          simple: choose Rock, Paper, or Scissors and hope that your selection
+          beats your opponent's. This timeless game has been enjoyed by millions
+          for generations, and it's easy to learn. Challenge yourself and
+          compete against others to see who will come out on top. With
+          fast-paced, exciting gameplay and endless possibilities,
+          Rock-Paper-Scissors is a game that never gets old. So why wait? Join
+          us for the ultimate Rock-Paper-Scissors experience and put your skills
+          to the test. Who knows, you may just surprise yourself and become the
+          champion! Get ready for some serious Rock-Paper-Scissors action!
+        </p>
+        <p>Good luck and have fun!</p>
+      </div>
     </div>
 
-    <div>
-      <p id="WhatPlayerChooses"></p>
-      <p id="WhatComputerChooses"></p>
-      <p id="whoWinRound"></p>
-      <p id="gameResult"></p>
+    <div class="choice-container" id="boxWithPlayerChoice">
+      <button class="choice" id="playerChoiceScissors">&#9996;</button>
+      <button class="choice" id="playerChoicePaper">&#128400;</button>
+      <button class="choice" id="playerChoiceRock">&#128074;</button>
+    </div>
+
+    <div class="game-container">
+      <div class="players-moves-container">
+        <div class="what-player-chooses">
+          <p>selected move:</p>
+          <p id="WhatPlayerChooses"></p>
+        </div>
+        <div class="what-computer-chooses">
+          <p>comupter move:</p>
+          <p id="WhatComputerChooses"></p>
+        </div>
+      </div>
+
+      <div class="round-verdict-container" id="whoWinRound">Who win round</div>
+      <div class="score-container" id="gameResult">
+        Player points 0 - Computer points 0
+      </div>
     </div>
   </body>
 </html>

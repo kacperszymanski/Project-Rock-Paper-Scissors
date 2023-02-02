@@ -1,9 +1,54 @@
+@font-face {
+  font-family: 'ticket_to_the_starregular';
+  src: url('ticket_to_the_star-webfont.woff2') format('woff2'),
+       url('ticket_to_the_star-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-color:#010326;
+  background-image:linear-gradient(
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.6)
+  ), url("background.png");
+  background-size: cover;
+  color: white;
+  font-size: 30px;
+  padding: 5%;
 
 
+}
+h1 {
+  font-family: 'ticket_to_the_starregular';
+  text-align: center;
+  margin: 20% 0 20% 0;
+  
+}
 
-/* CSS */
-.button-85 {
-  padding: 0.6em 2em;
+.intro-text{
+  text-align: center;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.choice-container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+.choice {
+  font-size: 50px;
+  padding: 50px;
+  margin: 14px;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -11,60 +56,71 @@
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 100px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.button-85:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+#playerChoiceScissors {
+  background-color: #0367A6;
+}
+#playerChoicePaper {
+  background-color: #025928
+}
+#playerChoiceRock {
+  background-color:#F2811D;
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+.game-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+.players-moves-container{
+  display: flex;
+  flex-direction: row;
 }
+.what-player-chooses{
+  display: flex;
+  flex-direction: row;
+  background-color:calc();
+  border: 5px dotted #F2811D;
+  border-radius: 40px;
+  margin: 14px;
+  padding: 25px;
+}
+
+.what-computer-chooses{
+  display: flex;
+  flex-direction: row;
+  background-color:calc();
+  border: 5px dotted #F2811D;
+  border-radius: 40px;
+  margin: 14px;
+  padding: 25px;
+}
+
+.round-verdict-container{
+  background-color:calc();
+  border: 5px dotted #F2811D;
+  border-radius: 40px;
+  margin: 14px;
+  padding: 25px;
+}
+
+.score-container{
+background-color:calc();
+border: 5px dotted #F2522E;
+border-radius: 40px;
+margin: 14px;
+padding: 25px;
+
+}
+
+#010326,
+#0367A6,
+#025928,
+#F2811D,
+#F2522E,
