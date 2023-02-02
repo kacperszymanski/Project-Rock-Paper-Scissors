@@ -92,11 +92,13 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .what-player-chooses{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background-color:calc();
   border: 5px dotted #F2811D;
   border-radius: 40px;
@@ -108,6 +110,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background-color:calc();
   border: 5px dotted #F2811D;
   border-radius: 40px;
