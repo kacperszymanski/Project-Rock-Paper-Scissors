@@ -5,6 +5,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@media (max-width: 500px){
+  #players-moves-container{
+  flex-direction: column;
+  }
+  #what-player-chooses{
+    flex-direction: column;
+  }
+}
 
 body{
   background-color:#010326;
@@ -43,7 +51,9 @@ h1 {
 .choice-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: auto;
+  
 }
 .choice {
   font-size: 50px;
@@ -81,10 +91,12 @@ h1 {
 .players-moves-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .what-player-chooses{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color:calc();
   border: 5px dotted #F2811D;
   border-radius: 40px;
@@ -95,6 +107,7 @@ h1 {
 .what-computer-chooses{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color:calc();
   border: 5px dotted #F2811D;
   border-radius: 40px;
