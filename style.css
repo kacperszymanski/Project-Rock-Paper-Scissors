@@ -6,7 +6,6 @@
   font-style: normal;
 }
 
-p { margin:0 }
 
 
 body{
@@ -107,6 +106,10 @@ h1 {
   
 }
 
+.moves-p{
+  margin:0
+  
+}
 .round-verdict-container{
   background-color:calc();
   border: 5px dotted #F2811D;
